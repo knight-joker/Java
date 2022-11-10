@@ -1,14 +1,14 @@
-package day11;
+package day22;
 
 public class Test {
-	//Somesentance
-	public void doSomething() {
-		//SomeSentance
-	}
-	protected Test dolt(){
-		return new Test();
-	}
 	public static void main(String[] args) {
-		// TODO 自动生成的方法存根
+		cat c = new cat();
+		girl g = new girl();
+		g.play(c);
+		Dog d =new Dog();
+		g.play(d);
+		animal an = c;
+		//animal an = new animal();
+		g.play(an);
 	}
 }
