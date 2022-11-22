@@ -1,44 +1,45 @@
-package Day30;
+package Day31;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
 
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
 
 public class MyFrame1 extends JFrame{
-	JButton nextButton = new JButton("同意");
-	JCheckBox agreeField  = new JCheckBox("陆珍是猪");
 	public  MyFrame1(String title) {
 		super(title);
 		
 		JPanel k = new JPanel();
 		this.setContentPane(k);
+		k.setLayout(null);
 		
 	
-		k.add(agreeField);
-		//下一步按钮
-	
-		k.add(nextButton);
-		//界面初始化
-		agreeField.setSelected(false);
 		
-		
-		//给caheckbox添加事件处理
-		agreeField.addActionListener(new ActionListener() {
+		ColorLabel a1 =new ColorLabel("1",Color.YELLOW,100,100);
+		k.add(a1);
+		a1.setBounds(0, 0, 100, 50);
+
+	}
+
+	private static class ColorLabel extends JLabel{
+		public ColorLabel(String text,Color bgColor,int a,int b) {
+			this.setText(text);
 			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				if(agreeField.isSelected())
-					nextButton.setEnabled(true);
-				else
-					nextButton.setEnabled(false);
-			}
-		});
-		
-		
+			setOpaque(true);
+			this.setBackground(bgColor);
+			this.setHorizontalAlignment(SwingConstants.CENTER);
+			this.setPreferredSize(new Dimension(a,b));
+			
+			
+			
+		}
 	}
 	
 }
+
+

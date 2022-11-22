@@ -1,45 +1,49 @@
-package Day30;
+package Day31;
+import java.awt.Color;
+import java.awt.Dimension;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+
+
 
 public class MyFrame2 extends JFrame{
-	
 	public  MyFrame2(String title) {
 		super(title);
 		
 		JPanel k = new JPanel();
 		this.setContentPane(k);
-		JComboBox<String> colorField = new JComboBox();
-		k.add(colorField);
-		//
-		colorField.addItem("红");
-		colorField.addItem("绿");
-		colorField.addItem("蓝");
 		
-		//添加一个按钮
-		JButton button = new JButton("测试");
-		k.add(button);
-		button.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				test();
-			}
-
-			private void test() {
-				int index = colorField.getSelectedIndex();
-				System.out.println("用户选中的项：" + index);
-				int count = colorField.getItemCount();
-				String value = colorField.getItemAt(0);
-				System.out.println(count + value);
-				
-			}
-		});
+		k.setLayout(new MyLayout());
+		ColorLabel a1 =new ColorLabel("1",Color.YELLOW,100,100);
+		ColorLabel a2 =new ColorLabel("2",Color.BLACK,100,100);
+		ColorLabel a3 =new ColorLabel("3",Color.RED,100,100);
+		ColorLabel a4 =new ColorLabel("4",Color.BLUE,100,100);
+		ColorLabel a5 =new ColorLabel("5",Color.WHITE,100,100);
+		
+		k.add(a1);
+		k.add(a2);
+		k.add(a3);
+		k.add(a4);
+		k.add(a5);
 	}
+
+	private static class ColorLabel extends JLabel{
+		public ColorLabel(String text,Color bgColor,int a,int b) {
+			this.setText(text);
+			
+			setOpaque(true);
+			this.setBackground(bgColor);
+			this.setHorizontalAlignment(SwingConstants.CENTER);
+			this.setPreferredSize(new Dimension(a,b));
+			
+			
+			
+		}
+	}
+	
 }
+
+
