@@ -1,16 +1,13 @@
-package Day31;
+package Day32;
 
 import javax.swing.JFrame;
 
 public class MyDome {
 	public static void main(String args[]) {
-		MyFrame2 frame = new MyFrame2("Java");
+		MyFrame frame = new MyFrame("Java");
 		frame.setDefaultCloseOperation((JFrame.EXIT_ON_CLOSE));
-		frame.setSize(1000,1000);
+		frame.setSize(600,600);
 		frame.setVisible(true);
 	}
 
-	
 }
-
-
