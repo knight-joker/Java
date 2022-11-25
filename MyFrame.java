@@ -1,5 +1,6 @@
-package Day32;
+package kswing;
 
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -11,12 +12,12 @@ public class MyFrame extends JFrame{
 		super(title);
 		
 		JPanel k = new JPanel();
-		this.setContentPane(k);
-		
-		MyControl c = new MyControl();
+		this.setContentPane(k);	
+		PIctureView c = new PIctureView();
 		k.add(c);
-		c.setPreferredSize(new Dimension(300,250));
-		
+		c.setPreferredSize(new Dimension(200,200));
+		c.setBackground(Color.yellow);
+		c.setImage("res/ai-pic1.jpg");
 	}
 	
 }
