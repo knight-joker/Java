@@ -1,14 +1,12 @@
-package kswing;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+package Day34;
 
-import Day33.MyFrame;
+import javax.swing.JFrame;
 
 public class MyDome {
 	public static void main(String args[]) {
 		MyFrame frame = new MyFrame("Java");
 		frame.setDefaultCloseOperation((JFrame.EXIT_ON_CLOSE));
-		frame.setSize(500,500);
+		frame.setSize(1050,650);
 		frame.setVisible(true);
 	}
 
