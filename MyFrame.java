@@ -1,4 +1,4 @@
-package Day34;
+package day35;
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -18,11 +18,9 @@ public class MyFrame extends JFrame{
 		
 		JPanel k = new JPanel();
 		this.setContentPane(k);
-		JButton b = new JButton("猪佩奇好棒");
-		MyControl c = new MyControl();
+		HandDraw c = new HandDraw();
 		k.add(c);
-		k.add(b);
-		((Component) c).setPreferredSize(new Dimension(120,120));
+		((Component) c).setPreferredSize(new Dimension(500,500));
 		
 		c.addMouseListener(new MouseAdapter() {
 
@@ -72,38 +70,6 @@ public class MyFrame extends JFrame{
 				// TODO 自动生成的方法存根
 				System.out.println("按钮被点击");
 				
-			}
-		});
-		b.addMouseListener(new MouseListener() {
-			
-			@Override
-			public void mouseReleased(MouseEvent e) {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void mousePressed(MouseEvent e) {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void mouseExited(MouseEvent e) {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				// TODO 自动生成的方法存根
-				
-			}
-			
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				// TODO 自动生成的方法存根
-				System.out.println("猪佩奇加油");
 			}
 		});
 	}
